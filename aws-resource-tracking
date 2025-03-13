@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+#################
+# Author: Hariharan
+# Date: 11th March
+# This script describes aws resources
+# Version: v1
+# ###############
+#
+# AWS EC2
+# AWS S3
+# AWS Lambda
+# AWS IAM Users
+#
+# list of aws ec2 instances
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+echo "print list of ec2 instances"
+
+# list of s3 buckets
+aws s3 ls
+echo "print list of s3 buckets"
+
+# list of lamba functions
+aws lambda list-functions
+echo "print list of lambda functions"
+
+# list of IAM Users
+aws IAM list-users
+echo "print the list of IAM Users"
